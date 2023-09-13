@@ -1,0 +1,710 @@
+/* 
+? Смартфоны — 320 пикселей, 480 и выше;
+? Планшеты — 768 пикселей и выше;
+? Нетбуки — 1024 (/) пикселей и выше;
+? Мониторы — 1280 (/) пикселей, 1600 (/), 1920 (/) и выше.
+*/
+
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;font-family: 'Manrope', sans-serif;}
+p,span,div{font-family: 'Manrope', sans-serif;}
+/*--------------------*/
+
+/* fonts 
+
+    Лого:
+        font-family: 'Syncopate', sans-serif;
+    Заголовок, текст:
+        font-family: 'Manrope', sans-serif;
+
+*/
+
+body {
+    height: auto;
+
+    background-color: #F2F3EB;
+}
+
+/* header */
+
+header {
+    height: 55px;
+    width: auto;
+    margin: 25px 30px 0;
+    padding: 0 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #000;
+    border-radius: 15px;
+}
+
+.header__logo {
+    height: 20px;
+    margin-left: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo-txt {
+    padding-top: 2px;
+
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: bold;
+}
+
+.header__btns-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__btn {
+    height: 47px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    
+    color: #fff;
+    font-weight: bold;
+
+    border: 2px solid #595959;
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.header__btn--resume {
+    padding: 0 18px;
+}
+
+.header__btn--contacts {
+    padding: 0 36px;
+
+}
+
+/* /header */
+
+/* main */
+
+main {
+    max-width: 1240px;
+    margin: 75px auto; 
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+
+/* intro */
+
+.main-info__intro {
+    width: 550px;
+}
+
+.intro__label {
+    height: 22px;
+    width: 158px;
+    padding: 3px;
+
+    text-align: center;
+
+    border: 1px solid #000;
+    border-radius: 13.5px;
+}
+
+.intro__name {
+    position: relative;
+    margin: 25px 0;
+
+    font-size: 71px;
+    font-weight: bold;
+    line-height: 71px;
+    letter-spacing: -3.55px;
+}
+
+.intro__name::after {
+    content: "";
+
+    width: 315px;
+
+    display: block;
+    position: absolute;
+    top: 52%;
+    z-index: -1;
+
+    border-bottom: 37px solid #E2B6CD;
+}
+
+.intro__text {
+    margin: 40px 0 30px;
+
+    color: rgba(16, 16, 16, 0.7);
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.intro__btn {
+    height: 50px;
+    width: 220px;
+    padding: 18px 30px 0 34px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #F2F3EB;
+    font-weight: bold;
+
+    background-color: #000;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+.intro__btn::after {
+    content: url(/img/arrow_forward.svg);
+}
+
+/* /intro */
+
+/* accordion */
+
+.main-info__accordion {
+    margin-top: 45px;
+
+    display: flex;
+    gap: 40px;
+}
+
+.accordion {
+    width: 255px;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 2px solid #000;
+
+    cursor: pointer;
+}
+
+.accordion__header-name-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.accordion__header-name {
+    padding-bottom: 8px;
+
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.accordion__header-name-img {
+    padding-bottom: 5px;;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion__content {
+    width: 255px;
+    height: 0;
+
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.accordion input:checked ~ .accordion__content {
+    height: 100%;
+}
+
+.accordion__header-image-checked {
+    display: none;
+}
+
+input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header-image-checked {
+    display: block;
+}
+
+input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header-image {
+    display: none;
+}
+
+.accordion__content-container {
+    padding: 10px 5px;
+}
+
+.accordion__label, .accordion__experience {
+    margin: 2px;
+    padding: 5px 10px;
+
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    background-color: #f5f5f5;
+    border: 1px solid #8b8b8b;
+    border-radius: 10px;
+}
+
+.accordion__experience-title {
+    padding: 10px 0;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.accordion__experience-time {
+    font-size: 14px;
+    color: #595959;
+}
+
+.accordion__experience-text {
+    padding: 10px 0;
+
+    font-size: 16px;
+}
+
+/* /accordion */
+
+/* main-projects */
+
+.main-projects {
+    margin-top: 90px;
+    padding-bottom: 10px;
+
+    display: flex;  
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 5px;
+}
+
+.main-projects__container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.collectors-wallet {
+    height: 374px;
+    width: 269px;
+    margin-top: 43px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+
+    border-radius: 15px;
+}
+
+.collectors-wallet::before {
+    content: url(/img/plus--decor.svg);
+
+    position: absolute;
+    top: -9%;
+    left: -13%;
+}
+
+.collectors-wallet__btn {
+    height: 65px;
+    width: 221px;
+
+    position: absolute;
+    top: 75%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-weight: bold;
+    line-height: 20px;
+
+    border: 1px dashed #000;
+    border-radius: 30px;
+    border-spacing: 10px;
+
+    background-color: #FDF6D2;
+
+    cursor: pointer;
+}
+
+.collectors-wallet__img {
+    margin-bottom: 20px;
+}
+
+.serdce-cards {
+    width: 263px;
+    height: 218px;
+    padding: 20px 14px 20px 20px;
+    
+    background-color: #A9DFFF;
+
+    border-radius: 15px;
+}
+
+.serdce-cards__title {
+    font-weight: bold;
+}
+.serdce-cards__img {
+    margin-top: 5px;
+}
+.serdce-cards__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+    color: #000;
+}
+
+.alpaca {
+    width: 263px;
+    height: 234px;
+
+    position: relative;
+
+    background-color: #333333;
+
+    border-radius: 15px;
+}
+
+.alpaca__container {
+    position: relative;
+}
+
+.alpaca__img {
+    width: 172px;
+    height: 172px;
+    margin-left: 34px;
+}
+
+.alpaca__container::after {
+    content: "";
+    
+    width: 230px;
+
+    display: block;
+    position: absolute;
+    top: 100%; 
+    left: 6%;
+
+    border-bottom: 2px dashed rgba(222, 222, 222, 0.31);
+}
+
+.alpaca__btn {
+    height: 45px;
+    width: 230px;
+    margin: 7px 23px 12px 17px;
+    padding: 0 4px 0 2px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* /main */
+
+@media (max-width: 1280px) {
+
+    .header__logo {
+        margin-left: 50px;
+    }
+
+    .main {
+        gap: 2%;
+    }
+
+    .main-info__intro {
+        width: 400px;
+    }
+
+    .intro__name {
+        font-size: 58px;
+        line-height: 58px;
+    }
+
+    .intro__name::after {
+        width: 255px;
+
+        border-bottom: 30px solid #E2B6CD;
+    }
+
+    .intro__text {
+        line-height: 18px;
+    }
+
+    .main-info__accordion {
+        flex-direction: column;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .accordion__header-name {
+        font-size: 28px;
+    }
+
+    .accordion__content {
+        width: 400px;
+    }
+
+    .accordion__experience {
+        width: 100%;
+    }
+
+    .main-projects {
+        height: 530px;
+        margin-top: 0px;
+
+        align-items: center;
+    }
+
+    .collectors-wallet {
+        height: 333px;
+        width: 242px;
+        margin-top: 10px;
+    }
+    
+    .collectors-wallet__img {
+        height: 262px;
+        width: 202px;
+    }
+
+    .collectors-wallet::before {
+        content: url(/img/plus--decor-1025.svg);
+    }
+
+    .collectors-wallet__btn {
+        height: 58px;
+        width: 198px;
+
+        line-height: 16px;
+    }
+
+    .serdce-cards {
+        width: 235px;
+        height: 197px;
+        padding: 20px 14px 20px 20px;
+    }
+
+    .serdce-cards__img {
+        width: 94px;
+        height: 97px;
+    }
+
+    .serdce-cards__btn {
+        font-size: 24px;
+    }
+
+    .alpaca {
+        width: 236px;
+        height: 210px;
+    }
+
+    .alpaca__container::after {
+        width: 207px;
+    }
+
+    .alpaca__img {
+        width: 154px;
+        height: 154px;
+    }
+
+    .alpaca__btn {
+        width: 236px;
+
+        padding: 5px 17px 0 17px;
+        margin: 0;
+
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    main {
+        margin: 50px 30px 0;
+
+        flex-direction: column;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .main-info__intro {
+        width: 100%;
+    }
+
+    .main-info__accordion {
+        margin-bottom: 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .accordion {
+        /* max-width: 50%; */
+        /* width: auto; */
+        width: 100%;
+    }
+
+    .accordion__header {
+        /* width: 80%; */
+    }
+
+    .accordion__content {
+        width: auto;
+    }
+
+    .main-projects {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .main-projects__container {
+        height: auto;
+        width: 40%;
+    }
+
+    .serdce-cards, .alpaca {
+        width: 100%;
+        height: auto;
+    }
+
+    .serdce-cards__img {
+        width: 111px;  
+        height: 105px;
+    }
+
+    .collectors-wallet::before {
+        display: none;
+    }
+
+    .collectors-wallet {
+        width: 100%;
+        /* margin-top: 10px; */
+    }
+
+    .alpaca__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .alpaca__container::after {
+        width: 88%;
+    }
+
+    .alpaca__img {
+        width: 172px;
+        height: 172px;
+
+        margin: 0;
+    }
+
+    .alpaca__btn {
+        width: 100%;
+
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    header {
+        margin: 15px 10px 0;
+    }
+    
+    .header__logo {
+        display: none;
+    }
+
+    .header__btns-container {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .main-info {
+        display: flex;
+        flex-direction: column;
+        /* gap: 25px; */
+    }
+
+    .main-info__accordion {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 630px) {
+    .main-projects__container {
+        width: 100%;
+    }
+
+    .main-info__accordion {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 516px) {
+    .main-projects {
+        display: block;
+    }
+
+    .main-projects__container {
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    .serdce-cards__img {
+        height: 150px;
+        width: auto;
+    }
+}

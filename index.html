@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Погодин Артем / Портфолио</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <img class="header__logo-img" src="img/logo.svg" alt="logo-img">
+            <p class="header__logo-txt">pogodipostoi</p>
+        </div>
+        <div class="header__btns-container">
+            <!-- <div class="header__btn header__btn--resume">Скачать резюме</div> -->
+            <a class="header__btn header__btn--github" href="https://github.com/PogodiPostoi" target="_blank">Профиль GitHub</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-info">
+            <div class="main-info__intro">
+                <div class="intro__label">Портфолио</div>
+                <h1 class="intro__name">Погодин Артем <br> Front-end <br> Developer</h1>
+                <p class="intro__text">Привет! Я разрабатываю веб-приложения используя JS и React. <br> Мне будет приятно, если ты ознакомишься с моим опытом и пет-проектами. </p>
+                <a class="intro__btn" href="https://t.me/pogodipostoi" target="_blank">Связаться</a>
+            </div>
+            <div class="main-info__accordion">
+                <label class="accordion">
+                    <input type="checkbox" name="checkbox-accordion">
+                    <div class="accordion__header">
+                        <div class="accordion__header-name-container">
+                            <img class="accordion__header-name-img" src="img/skills.svg" alt="skills">
+                            <h3 class="accordion__header-name">Навыки</h3>
+                        </div>
+                        <img class="accordion__header-image" src="img/plus.svg" alt="plus">
+                        <img class="accordion__header-image-checked" src="img/checked.svg" alt="checked">
+                    </div>
+                    <div class="accordion__content">
+                        <div class="accordion__content-container">
+                            <div class="accordion__label">React</div>
+                            <div class="accordion__label">Redux</div>
+                            <div class="accordion__label">JavaScript</div>
+                            <div class="accordion__label">TypeScript</div>
+                            <div class="accordion__label">HTML</div>
+                            <div class="accordion__label">CSS</div>
+                            <div class="accordion__label">SCSS</div>
+                        </div>
+                    </div>
+                </label>
+                <label class="accordion">
+                    <input type="checkbox" name="checkbox-accordion">
+                    <div class="accordion__header">
+                        <div class="accordion__header-name-container">
+                            <img class="accordion__header-name-img" src="img/experience.svg" alt="skills">
+                            <h3 class="accordion__header-name">Опыт</h3>
+                        </div>
+                        <img class="accordion__header-image" src="img/plus.svg" alt="plus">
+                        <img class="accordion__header-image-checked" src="img/checked.svg" alt="checked">
+                    </div>
+                    <div class="accordion__content">
+                        <div class="accordion__content-container">
+                            <div class="accordion__experience">
+                                <h6 class="accordion__experience-title">Альфа-Банк</h6>
+                                <p class="accordion__experience-time">Апрель 2022 - По настоящее время</p>
+                                <p class="accordion__experience-text">Главный специалист по тестированию</p>
+                            </div>
+                            <div class="accordion__experience">
+                                <h6 class="accordion__experience-title">КРИФ</h6>
+                                <p class="accordion__experience-time">Март 2020 - Апрель 2022</p>
+                                <p class="accordion__experience-text">Специалист по тестированию</p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="main-projects">
+            <div class="main-projects__container">
+                <div class="collectors-wallet">
+                    <img src="img/collectors-wallet.png" alt="collectors-wallet" class="collectors-wallet__img">
+                    <a class="collectors-wallet__btn" onclick="alert('Извините, проект ещё в разработке');">
+                        Кошелек <br> коллектора
+                        <img class="collectors-wallet__btn-arrow" src="img/arrow_forward--black.svg" alt="arrow">
+                    </a>
+                </div>
+            </div>
+            <div class="main-projects__container">
+                <div class="serdce-cards">
+                    <p class="serdce-cards__title">Serdce.cards</p>
+                    <img src="img/card.svg" alt="card" class="serdce-cards__img">
+                    <a class="serdce-cards__btn" href="https://pogodi-serdce-card.web.app/" target="_blank">
+                        Электронные <br> открытки
+                        <img class="serdce-cards__btn-arrow" src="img/arrow_rounded.svg" alt="arrow">
+                    </a>
+                </div>
+                <div class="alpaca">
+                    <div class="alpaca__container">
+                        <img class="alpaca__img" src="img/Alpaca.png" alt="alpaca">
+                    </div>
+                    <a class="alpaca__btn" href="https://pogodipostoi.github.io/Random-Alpaca-Generator/" target="_blank">
+                        Генератор альпак
+                        <img class="alpaca__btn-arrow" src="img/arrow_forward.svg" alt="arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
