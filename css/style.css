@@ -184,7 +184,7 @@ main {
 }
 
 .intro__btn::after {
-    content: url(/img/arrow_forward.svg);
+    content: url(../img/arrow_forward.svg);
 }
 
 /* /intro */
@@ -331,7 +331,7 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
 }
 
 .collectors-wallet::before {
-    content: url(/img/plus--decor.svg);
+    content: url(../img/plus--decor.svg);
 
     position: absolute;
     top: -9%;
@@ -514,7 +514,7 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
     }
 
     .collectors-wallet::before {
-        content: url(/img/plus--decor-1025.svg);
+        content: url(../img/plus--decor-1025.svg);
     }
 
     .collectors-wallet__btn {
