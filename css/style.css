@@ -573,13 +573,7 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
     }
 
     .accordion {
-        /* max-width: 50%; */
-        /* width: auto; */
         width: 100%;
-    }
-
-    .accordion__header {
-        /* width: 80%; */
     }
 
     .accordion__content {
@@ -612,7 +606,6 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
 
     .collectors-wallet {
         width: 100%;
-        /* margin-top: 10px; */
     }
 
     .alpaca__container {
@@ -640,7 +633,7 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
     
 }
 
-@media (max-width: 810px) and (min-width: 769px) {
+@media (max-width: 799px) and (min-width: 769px) {
     .intro__name::after {
         top: 64%;
     }
@@ -664,7 +657,6 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
     .main-info {
         display: flex;
         flex-direction: column;
-        /* gap: 25px; */
     }
 
     .main-info__accordion {
