@@ -335,6 +335,8 @@ input[name="checkbox-accordion"]:checked ~ .accordion__header .accordion__header
 
     font-weight: bold;
     line-height: 20px;
+    text-decoration: none;
+    color: #000;
 
     border: 1px dashed #000;
     border-radius: 30px;
